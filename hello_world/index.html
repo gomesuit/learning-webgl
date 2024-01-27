@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>WebGL Hello World</title>
-</head>
-<body>
-    <canvas id="webglCanvas" width="400" height="400"></canvas>
-    <script>
-        // WebGLコンテキストの取得
-        var canvas = document.getElementById('webglCanvas');
-        var gl = canvas.getContext('webgl');
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <script src="webgl-demo.js" type="module"></script>
+  </head>
 
-        // エラーチェック
-        if (!gl) {
-            alert('WebGLを初期化できません。ブラウザがサポートしていない可能性があります。');
-            return;
-        }
-
-        // クリアカラーを設定（RGBA）
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);  // 黒でクリア
-        gl.clear(gl.COLOR_BUFFER_BIT);      // カラーバッファをクリア
-    </script>
-</body>
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
 </html>
